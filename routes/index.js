@@ -7,5 +7,6 @@ var brt = require('../controller/brtController');
 
 /* GET home page. */
 router.get('/', brt.buscar);
+router.post('/veiculos', brt.pegaVeiculo)
 
 module.exports = router;
