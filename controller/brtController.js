@@ -14,6 +14,7 @@ var sendJsonResponse = function (res, status, content) {
 const GOOGLE = async (urls, latOrigem, lngOrigem, latDestino, lngDestino) => {
     var deferred = Q.defer();
     const tamanho = urls.length;
+    console.log(tamanho);
     var arr = [];
     count = 1;
 
