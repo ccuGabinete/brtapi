@@ -170,11 +170,8 @@ module.exports.pegaVeiculo = async (req, res) => {
                 data.forEach(t => {
                     var index = t.trajeto.indexOf(str);
                     // var time = now - t.dataHora;
-
-                    if (t.velocidade > 0) {
-                        if (index !== -1) {
-                            aux.push(t);
-                        }
+                    if (index !== -1) {
+                        aux.push(t);
                     }
                 })
 
@@ -193,7 +190,7 @@ module.exports.pegaVeiculo = async (req, res) => {
                 resp.then(d => {
                     sendJsonResponse(res, 200, d);
                 })
-               
+
 
             } else {
                 sendJsonResponse(res, 401, { Erro: "vazio" })
