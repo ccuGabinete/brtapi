@@ -150,6 +150,9 @@ module.exports.buscar = (req, res) => {
 
 module.exports.pegaVeiculo = async (req, res) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
+
+    console.log(req.body);
+
     axios.get('http://webapibrt.rio.rj.gov.br/api/v1/brt')
         .then(data => {
             const DateTime = luxon.DateTime;
