@@ -169,8 +169,9 @@ module.exports.pegaVeiculo = async (req, res) => {
 
                 data.forEach(t => {
                     var index = t.trajeto.indexOf(str);
-                    var time = now - t.dataHora;
-                    if (time < 60000) {
+                    // var time = now - t.dataHora;
+
+                    if (t.velocidade > 0) {
                         if (index !== -1) {
                             aux.push(t);
                         }
